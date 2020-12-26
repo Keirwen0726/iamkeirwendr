@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Web Practicing </title>
+<style type="text/css"> 
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ font-family: serif;
+}
+
+h1{
+ margin-top: 0;
+ color: white;
+ display: flex;
+}
+body{
+  background: #333;
+}
+.container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 180px;
+ color: white;
+ background: none;
+}
+
+.post{
+ justify-content: center;
+ align-items: center;
+ background: none;
+ position: relative;
+ display: flex;
+ line-height: 0px;
+ color: black;
+ /* flex-direction: none; */
+ height: 150px;
+ margin-top: 23%;
+ }
+ 
+.quote{
+/*  position: none; */
+  background-color: #333;
+  display: flex;
+  flex-direction: none;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: none;
+  padding: 0px;
+}
+.quote, blockquote{
+  color: white;
+  padding: 8px;
+  max-height: 100%;
+  line-height: 0px;
+  margin-top: 50px;
+  z-index: 1;
+  font-weight: thin;
+  font-style: italic;
+  font-size: 12px;
+}
+
+ .post__content, .post-parag{
+  color: black;
+  text-align: justify;
+  margin-top: 0px;
+  font-style: italic;
+  font-size: 14px;
+ }
+ 
+ .post-title{
+  margin-top: 1rem;
+  font-style: italic;
+  text-transform: none;
+  text-align: center;
+  font-style: normal;
+  color: white;
+ }
+ .main-content, .post__content{
+ display: flex;
+ background: #333;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ left: 0px;
+ line-height: 1.5rem;
+ width: 100%;
+ letter-spacing:0.5rem;
+ padding: 1rem;
+ border: 0px solid gray;
+ }
+
+ 
+ .main-content p{
+  color: white;
+  text-align: justify;
+  padding: 20px;
+ }
+.post__image, .imagePic{
+  display: flex;
+  justify-content: center;
+  align-items: center
+  }
+
+.imagePic{
+ border: 0px solid black;
+ border-radius: 0px;
+ padding: 0px;
+ width: 100%;
+ height: 280px;
+ margin: 0px;
+ background-image: none;
+}
+  
+ 
+ .division-head{
+ background: #000;
+ height: 80px;
+ margin-bottom: 0%;
+ display:flex;
+ justify-content: center;
+ align-items: center;
+ }
+ 
+.wrapper{
+ width: 100%;
+ max-width: 960px;
+ margin: 0 auto;
+}
+
+/* Menu Base Style */
+nav{
+ background-color: #333;
+}
+
+nav ul{
+ list-style-type: none;
+ padding: 10px;
+ text-transform: uppercase;
+ text-align: left;
+}
+
+nav a{
+ padding: 10px;
+ display: block;
+ text-decoration: none;
+ color: white;
+}
+
+.nav, a:hover{
+ background-color: #555;
+ color: black;
+}
+
+.mySec{
+ display: flex;
+ background: #bce;
+ width: 100%;
+ height: 50vh;
+ justify-content: center;
+ align-items: center;
+ left: 50px;
+}
+.mySection{
+ text-align: center;
+}
+.mySection, .mySec-parag{
+ color: black;
+}
+
+.main{
+ display: flex;
+ background: #bce;
+ width: 100%;
+ height: 50vh;
+ justify-content: center;
+ align-items: center;
+ left: 50px;
+}
+.myMain{
+ text-align: center;
+}
+.myMain p{
+ color: black;
+}
+
+.side{
+ display: flex;
+ background: #aea;
+ width: 100%;
+ height: 100vh;
+ justify-content: center;
+ align-items: ;
+ left: 0px;
+ flex-wrap: wrap;
+}
+.mySide{
+ text-align: center;
+}
+.mySide h2{
+ color: black;
+ text-align: left;
+ margin-top: 10px;
+}
+form{
+ background: #bce;
+ display: flex;
+ flex-direction: column;
+ width: 350px;
+ height: 100px auto;
+ border-radius: 20px;
+ padding: 20px;
+ box-sizing: border-box;
+}
+
+.myCont{
+padding: 0px 10px 10px 10px;
+display: flex;
+flex-direction: column;
+}
+
+label{
+ padding: 8px;
+ top: 0;
+ color: black;
+ text-align: left;
+ margin-top: 2px;
+}
+
+
+input[type=password]{
+  max-width: 100%;
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px 20px;
+  box-sizing: border-box;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+input[type=text]:focus {
+    background-color: none;
+    border: 1px solid steelblue;
+}
+input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input[type=text] {
+    border: none;
+    border-bottom: 1px solid black;
+    color: white;
+}
+
+input[type=text] {
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+}
+input[type=email] {
+    border: none;
+    border-bottom: 1px solid black;
+}
+input[type=password] {
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width:100%;
+    border-radius: 20px;
+}
+input[type=button], input[type=submit], input[type=reset] {
+    border: 1px solid black;
+    color: white;
+    padding: 16px 32px;
+    text-decoration: none;
+    margin: 4px 2px;
+    cursor: pointer;
+    width:100%;
+}
+
+.svgUser, .svg-user{
+  background: none;
+  color: blue;
+}
+ .svg-user{
+  width: 20%;
+  left: 50%;
+  padding: 0px;
+}
+
+
+footer{
+ display: flex;
+ width: 100%;
+ height: 0;
+ justify-content: center;
+ align-items: center;
+ left: 50px;
+ top:50%;
+ align-self: center;
+}
+.myFooter{
+ text-align: center;
+ height: 100%;
+ background-color: black;
+ padding: 0px;
+border: 0px solid gray;
+border-radius: 10px;
+}
+
+.myFooter .headingfooter{
+  background: none;
+  width: 383px;
+  height: 100%;
+  padding: 0px;
+  margin: 0px 0px 0px 0px;
+  top: 0;
+}
+
+.headingbox{
+  background: #333;
+  padding: 40px;
+}
+.myFooter h2{
+  color: white;
+  background: none;
+  height: 100%;
+  width: 100%;
+  font-size: 16px;
+  letter-spacing: 4px;
+  color: white;
+}
+.myFooter h3{
+  font-size: 14px;
+  letter-spacing: 0.3rem;
+  color: white;
+}
+
+.myFooter p{
+ color: white;
+ text-align: justify;
+ padding: 8px;
+ font-size: 12px;
+ text-indent: 40px;
+}
+.allRight{
+  margin-top: 0%;
+ display: flex;
+ background: black;
+ width: 100%;
+ height: 100px;
+ justify-content: center;
+ align-items: center;
+ left: 50px;
+}
+.reserve{
+ text-align: center;
+ color: none;
+}
+.reserve, p{
+ letter-spacing: 1.5px;
+ color: white;
+}
+.main-content, .btn{
+flex-direction: column;
+margin-top: 10px;
+left: 0;
+}
+.btn{
+ font-size: 18px;
+ border: 1px solid white;
+ background: transparent;
+ padding: 14px;
+ margin: 10px;
+ border-radius: 10px;
+ color: white;
+ left: 0;
+ transform: translate(70px);
+}
+
+.svg-fb{
+  color: red;
+  width: 30%;
+  margin-top: 0%;
+}
+.headingbox .bf-box{
+  background-color: none;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  width: 50%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+  height: 8rem;
+ z-index: 1;
+ color: white;
+}
+.headingbox .bf-box:hover{
+  background: black;
+  transition: 1s ease-in-out;
+  color: white;
+  opacity: .5;
+}
+.headingbox .ig-box:hover{
+  background: black;
+  transition: 1s ease-in-out;
+  color: white;
+  opacity: .5;
+}
+.headingbox .yt-box:hover{
+  background: black;
+  transition: 1s ease-in-out;
+  color: white;
+  opacity: .5;
+  animation-fill-mode: red;
+}
+
+.svg-ig{
+  color: blue;
+  width: 30%;
+}
+
+.headingbox .ig-box{
+  background-color: none;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  width: 50%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+  height: 8rem;
+  color: white;
+}
+
+
+.svg-yt{
+  color: blue;
+  width: 30%;
+}
+
+.headingbox .yt-box{
+  background-color: none;
+  border: 1px solid gray;
+  border-radius: 0.5rem;
+  width: 50%;
+  position: relative;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 50%;
+  transform: translate(-50%);
+  height: 8rem;
+  color: white;
+}
+
+footer, .boxContainer{
+  background: #333;
+  height: 100%;
+  width: 100%;
+  padding: 10px;
+  margin: 0px;
+}
+
+.separation{
+  margin: 0px;
+  padding: 8px;
+  background-color: white;
+}
+
+
+/* flex styling */
+@media screen and (min-width: 768px){
+  nav ul{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: none;
+   padding: 10px;
+  }
+  nav a{
+ // flex: 1 1 0;
+  }
+  
+ .allRight{
+  display: flex;
+  background: blue;
+  width: 100%;
+  height: 20vh;
+  justify-content: center;
+  align-items: center;
+  left: 50px;
+  }
+}
+
+
+</style>
+</head>
+
+<body>
+
+ <div class="division-head"> 
+ <h1> Personal Portfolio </h1>
+ </div>
+
+<div class="wrapper">
+ 	<nav>
+ 		<ul> 
+ 			<li> <a href=""> Home </a> </li>
+ 			<li> <a href="#section"> Services </a> </li>
+			<li> <a href="#main"> Skill </a> </li>
+			<li> <a href="#sidebar"> Contact </a> </li>
+			<li> <a href="#about"> About </a> </li>		
+ 		</ul>
+ 	</nav>
+</di>
+
+<div class="container">
+  <div class="post">
+    <div class="post__image">
+  		 <img src="Svg/img.png" alt="Image One" class="imagePic"/>
+     </div> 
+  </div>
+</div>
+<div class="quote">
+  <blockquote>
+  		   An Inspiring Expression of a Dev, Sir Ed.
+  </blockquote>
+</div>
+<div class="separation">
+</div>
+
+<section class="main-content">
+      <div class="post__content">
+         <h2 class="post-title"> Hi! I'm a Dev..  </h2> <br>
+           <p class="post-parag"> &nbsp; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto amet
+           est, nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?
+           </p>
+      </div>
+      <button type="button" class="btn" onclick="alert('Browser not Supported.')">Read More...</button>
+</section>
+
+<div class="separation">
+</div>
+ 
+ <section class="main-content">
+      <div class="post__content">
+         <h2 class="post-title"> SERVICE </h2> <br>
+           <p class="post-parag"> &nbsp; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto amet
+           est, nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?
+           </p>
+      </div>
+      <button type="button" class="btn" onclick="alert('Browser not Supported.')">Read More...</button>
+</section>
+ 
+ <div class="separation">
+</div>
+ 
+<section class="main-content">
+      <div class="post__content">
+         <h2 class="post-title"> SKILLS  </h2> <br>
+           <p class="post-parag"> &nbsp; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto amet
+           est, nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?
+           </p>
+      </div>
+      <button type="button" class="btn" onclicsk="alert('Browser not Supported.')">Read More...</button>
+</section>
+ 
+ <div class="separation">
+</div>
+
+ <section class="main-content">
+      <div class="post__content">
+         <h2 class="post-title"> CONTACT </h2> <br>
+           <p class="post-parag"> &nbsp; Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto amet
+           est, nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?nihil laborum laboriosam quaerat exercitationem incidunt corrupti?
+           Nam, harum?
+           </p>
+      </div>
+      <button type="button" class="btn" onclick="alert('Browser not Supported.')">Read More...</button>
+</section>
+ 
+ <sidebar class="side" id="sidebar">
+ 	<div class="mySide">
+ 
+		<form>
+		<h2> Contact </h2><br>
+		  <div class="svgUser"> 
+      	<img src="Svg/user-tie-solid.svg" class="svg-user"/>
+  	 </div>
+		 <div class="myCont">
+		     <label> Name: </label>
+			 <input type="text" placeholder="Name" class="Name"><br>
+			 <label> Email: </label>
+			 <input type="email" placeholder="email" class="Email"><br>
+			 <label> Password: </label>
+			 <input type="password" placeholder="Password" class="Pass"><br><br>
+			 <input type="submit" value="Submit">
+			 <input type="submit" value="Cancel" style="background:red;">
+		 </div>
+		</form>
+ 	</div>
+ </sidebar>
+ 
+ <footer>
+<div class="boxContainer"> 
+ 	<div class="myFooter" id="about">
+ 	  <div class="headingfooter">
+ 	    <br>
+     	<h2> Follow on Social Media </h2><br>
+ 	  </div>
+ 	
+ 		<div class="headingbox"> 
+      <div class="bf-box">
+     		<img src="Svg/facebook-brands.svg" class="svg-fb"/>
+     			<h3> Facebook </h3><br>
+      </div>
+     			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elitLorem ipsum, dolor sit amet consectetur adipisicing elit.
+     			    </p><br>
+    			 
+      <div class="ig-box">
+    		<img src="Svg/instagram-brands.svg" class="svg-fb"/>
+    			 <h3> Instagram </h3><br>
+      </div>			 
+    			 <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    			 </p><br>
+    			 
+       <div class="yt-box">
+    		<img src="Svg/youtube-brands.svg" class="svg-fb"/>
+    			 <h3> YouTube </h3><br>
+    		</div>	 
+    			 <p> Lorem ipsum, dolor sit amet consectetur adipisicing elit.Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+    			 </p>
+ 		</div>
+ 	
+	</div>
+</div>
+ </footer>
+ <div class="allRight">
+ <p class="reserve"> @ All Right Reserve 2020 </p>
+ </div>
+</body>
+</html>
